@@ -26,6 +26,10 @@
 <br />
 <div class="container">
 <h3>Stripe Payment Page</h3>
+
+<div class="alert alert-dark">
+    <strong>Output will be:</strong><br /> Error creating subscription. The payment attempt failed because additional action is required before it can be completed.<br /><mark>Because Stripe needs 2 way authorization for payment</mark>
+</div>
 <form action="{{route('processPayment', [$product, $price])}}" method="POST" id="subscribe-form">
 <div class="form-group">
 <div class="row">
@@ -55,6 +59,7 @@
 @endforeach
 </div>
 @endif
+<br />
 <div class="form-group text-center">
 <button type="button"  id="card-button" data-secret="{{ $intent->client_secret }}" class="btn btn-lg btn-success btn-block">SUBMIT</button>
 </div>

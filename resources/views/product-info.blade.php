@@ -28,8 +28,6 @@
     <h1>{{ $product->name }}</h1>
     <p class="lead">{{ $product->description }}</p> <br />
       <h3><small class="text-muted">Rs.{{$product->price}}</small></h3>
-      <a href="{{route('goToPayment', ['update information', 10])}}"><button>Update Information for $10</button></a>
-
         <a href="{{route('goToPayment', [$product->name, $product->price] ) }}"><button  class="btn btn-success">Buy Now</button></a>
 @endforeach
 </div>
